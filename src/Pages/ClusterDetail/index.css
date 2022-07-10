@@ -1,0 +1,25 @@
+.clusterdetail-page-container .clusterdetail-content {
+	padding: 2rem 4rem;
+
+}
+
+.clusterdetail-page-container .cluster-wrapper {
+	size: 8rem;
+}
+.clusterdetail-page-container .clusterdetail-attributes{
+	margin: 0 0 1rem 0;
+	row-gap: 2rem;
+}
+.clusterdetail-page-container .attribute-label {
+	width: 10rem;
+	padding: 5px 0 0 0;
+}
+.clusterdetail-page-container .attribute-value {
+	border: 1px solid gray;
+	border-radius: 5px;
+	direction: rtl;
+	text-align: left;
+	text-indent: 10px;
+	padding: 5px 0 0 10px ;
+	height: 1.5rem;
+}
