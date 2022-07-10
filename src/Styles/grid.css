@@ -1,0 +1,9 @@
+.d-grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.d-grid-4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}

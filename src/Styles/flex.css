@@ -21,3 +21,7 @@
 .f-content-end {
 	justify-content: flex-end;
 }
+
+.f-content-start {
+	justify-content: flex-start;
+}
