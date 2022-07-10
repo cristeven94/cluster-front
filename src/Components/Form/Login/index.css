@@ -1,0 +1,8 @@
+.form .form-field{
+	border: none;
+	border-bottom: 1px solid #d6d6d6;
+	border-radius: 5px;
+	height: 2rem;
+	text-indent: 20px;
+
+}
