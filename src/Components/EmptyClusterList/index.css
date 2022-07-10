@@ -1,0 +1,14 @@
+.emptyclusterlist-container {
+	border-radius: 15px;
+	border: 1px solid;
+	height: 80%;
+	width: 80%;
+	position: fixed;
+	bottom: 4rem;
+	align-items: center;
+}
+
+.emptyclusterlist-container .create-cluster-text {
+	height: 3rem;
+	font-weight: bolder;
+}
