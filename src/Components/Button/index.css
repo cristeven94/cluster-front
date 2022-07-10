@@ -1,0 +1,8 @@
+.button-container .button-text-container {
+	width: 7.5rem;
+	height: 2rem;
+}
+.button-container button {
+	border: none;
+	border-radius: 5px;
+}
