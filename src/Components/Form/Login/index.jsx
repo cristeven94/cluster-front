@@ -34,7 +34,6 @@ const Form = ({}) => {
           <FormField name="password" placeholder="password" type="password" />
           <Button
             className="d-flex f-content-end"
-            type="submit"
             onClick={handleSubmit}
             text="Log in"
           />
