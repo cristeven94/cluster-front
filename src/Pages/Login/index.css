@@ -1,0 +1,14 @@
+
+.login-page-container {
+	background: lightgray;
+	height: 100%;
+	width: 100%;
+	
+}
+
+.login-left-container {
+	width: 30%;
+	background: white;
+	padding: 10rem 3rem 0 3rem;
+}
+
