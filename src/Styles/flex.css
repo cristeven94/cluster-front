@@ -1,0 +1,23 @@
+.d-flex {
+	display:flex;
+}
+
+.f-row {
+	flex-direction: row;
+}
+
+.f-col {
+	flex-direction: column;
+}
+
+.f-items-center {
+	justify-items: center;
+}
+
+.f-content-center {
+	justify-content: center;
+}
+
+.f-content-end {
+	justify-content: flex-end;
+}
