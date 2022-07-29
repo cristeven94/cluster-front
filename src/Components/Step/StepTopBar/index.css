@@ -1,0 +1,18 @@
+.steptopbar-container  {
+	margin: 0 0 5rem 0;
+}
+
+.steptopbar-container .step-number {
+	border-radius: 50%;
+	border: 1px solid;
+	height: 1.5rem;
+	width: 1.5rem;
+	text-align: center;
+	}
+
+.steptopbar-container .step-number-separator {
+	width: 20%;
+	height: 1px;
+	background: gray;	
+	margin: 0 2rem
+}

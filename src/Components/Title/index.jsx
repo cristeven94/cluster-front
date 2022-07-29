@@ -11,7 +11,12 @@ const Title = ({ textClassName, text, type = "main" }) => {
           textClassName ?? ""
         }`}
       >
-        <h2 style={{ color: fontColors.primary, fontSize: fontSizes.primary }}>
+        <h2
+          style={{
+            color: fontColors.primary,
+            fontSize: type === "main" ? fontSizes.primary : fontSizes.secondary,
+          }}
+        >
           {text}
         </h2>
       </div>

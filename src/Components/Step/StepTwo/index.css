@@ -1,0 +1,14 @@
+.steptwo-container .config-form-wrapper {
+	width: 10rem
+}
+.steptwo-container .config-form-wrapper .cpu-label-wrapper{
+	width: 10rem
+}
+
+
+.steptwo-container .nodes-form-wrapper .nodes-label-wrapper {
+	width: 30rem
+}
+.steptwo-container .nodes-form-wrapper .nodes-label-wrapper .nodes-label{
+	width: 10rem
+}

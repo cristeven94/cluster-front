@@ -2,7 +2,9 @@ import React from "react";
 import { ThemeContext } from "../../Theme";
 import "./index.css";
 
-const Loader = ({ height = "2rem", width = "2rem", text }) => {
+const Loader = ({ size = "2rem", text }) => {
+  const height = size;
+  const width = size;
   const { fontColors } = React.useContext(ThemeContext);
   return (
     <div className="loader-container " style={{ height, width }}>

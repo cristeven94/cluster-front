@@ -18,3 +18,7 @@
 	height: 100%;
 	width: 100%;
 }
+
+.loader-container .loader-text {
+	width: 10rem
+}

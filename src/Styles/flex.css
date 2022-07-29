@@ -25,3 +25,19 @@
 .f-content-start {
 	justify-content: flex-start;
 }
+
+.f-content-space-bet {
+	justify-content: space-between;
+}
+
+.a-items-end {
+	align-items: flex-end;
+}
+
+.a-items-center {
+	align-items: center;
+}
+
+.a-self-center {
+	align-self: center;
+}
