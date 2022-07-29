@@ -3,7 +3,17 @@ import { ThemeContext } from "../../Theme";
 import ClusterNode from "../ClusterNode";
 import "./index.css";
 
-const Cluster = (nodes = []) => {
+const Cluster = (
+  id,
+  user,
+  cloud_provider,
+  cluster_name,
+  agents_quantity,
+  agents_memeory,
+  is_running,
+  is_active,
+  nodes = []
+) => {
   const { border } = React.useContext(ThemeContext);
   return (
     <div
