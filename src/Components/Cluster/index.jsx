@@ -3,18 +3,7 @@ import { ThemeContext } from "../../Theme";
 import ClusterNode from "../ClusterNode";
 import "./index.css";
 
-const Cluster = (
-  id,
-  user,
-  cloud_provider_id = {},
-  cluster_name = "Default name",
-  agents_quantity = 0,
-  agents_mememory = 0,
-  is_running = false,
-  is_active = false,
-  nodes = [],
-  ...props
-) => {
+const Cluster = ({ nodes = [] }) => {
   const { border } = React.useContext(ThemeContext);
   return (
     <div
@@ -24,42 +13,11 @@ const Cluster = (
       }}
     >
       <div className="node-list d-grid-4">
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>{" "}
-        <div className="node-wrapper">
-          <ClusterNode />
-        </div>
+        {nodes.map((node) => (
+          <div key={node.id} className="node-wrapper">
+            <ClusterNode {...node} />
+          </div>
+        ))}
       </div>
     </div>
   );
