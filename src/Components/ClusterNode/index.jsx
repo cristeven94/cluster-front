@@ -31,8 +31,8 @@ const ClusterNode = ({
         </div>
       </div>
       <div className="clusternode-body d-grid-2">
-        <div className="clusternode-attribute">{`RAM ${ram}GB`}</div>
-        <div className="clusternode-attribute">{`CPU ${cpu}`}</div>
+        <div className="clusternode-attribute">{`RAM ${ram_usage}GB`}</div>
+        <div className="clusternode-attribute">{`CPU ${cpu_usage}`}</div>
         <div className="clusternode-attribute">{`GPU ${gpu}`}</div>
         <div className="clusternode-attribute">{`Store ${storage}GB`}</div>
       </div>

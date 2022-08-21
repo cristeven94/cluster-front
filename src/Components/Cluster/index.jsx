@@ -6,13 +6,14 @@ import "./index.css";
 const Cluster = (
   id,
   user,
-  cloud_provider,
-  cluster_name,
-  agents_quantity,
-  agents_memeory,
-  is_running,
-  is_active,
-  nodes = []
+  cloud_provider_id = {},
+  cluster_name = "Default name",
+  agents_quantity = 0,
+  agents_mememory = 0,
+  is_running = false,
+  is_active = false,
+  nodes = [],
+  ...props
 ) => {
   const { border } = React.useContext(ThemeContext);
   return (
