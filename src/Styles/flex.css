@@ -29,7 +29,9 @@
 .f-content-space-bet {
 	justify-content: space-between;
 }
-
+.f-content-space-ar {
+	justify-content: space-around;
+}
 .a-items-end {
 	align-items: flex-end;
 }

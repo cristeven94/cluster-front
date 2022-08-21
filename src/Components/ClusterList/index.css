@@ -1,0 +1,29 @@
+.clusterlist-container .clusterlist-title-wrapper {
+	height: 20%;
+
+}
+.clusterlist-container .clusterlist-headers {
+	margin: 0 0 2rem 0;
+}
+.clusterlist-container .clusterlist-record-list {
+	max-height: 65%;
+	overflow: auto;
+}
+.clusterlist-container .clusterlist-record-list {
+	row-gap: 1.2rem;
+}
+
+.clusterlist-container .clusterlist-attribute {
+	padding: 0 1rem 0 0;
+}
+.clusterlist-container .clusterlist-attribute .clusterlist-attribute-text {
+	text-align: right;
+}
+
+.clusterlist-container .clusterlist-record:hover {
+	background: #eeeeee;
+}
+
+.clusterlist-container .clusterlist-header-name {
+	font-weight: bold;
+}

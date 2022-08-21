@@ -1,3 +1,7 @@
+.dashboard-container .dashboard-content{
+	padding: 2rem 4rem;
+}
+
 .dashboard-container .emptyclusterlist-wrapper {
 	height: 100%;
 	width: 100%;
