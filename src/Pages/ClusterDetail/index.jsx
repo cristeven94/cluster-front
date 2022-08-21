@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import PowerButton from "../../Components/PowerButton";
 import Cluster from "../../Components/Cluster";
 import SideBar from "../../Components/SideBar";
 import Title from "../../Components/Title";
@@ -44,6 +45,7 @@ const ClusterDetail = ({ clusters = [] }) => {
               {clusterData.application_id.application_name}
             </p>
           </div>
+          <PowerButton is_active={clusterData.is_running} />
         </div>
         <div className="clusterdetail-body">
           <Cluster {...clusterData} />
