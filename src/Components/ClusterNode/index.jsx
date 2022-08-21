@@ -3,11 +3,8 @@ import { ThemeContext } from "../../Theme";
 import "./index.css";
 
 const ClusterNode = ({
-  id,
-  node_name = "Cluster",
   ram_usage = 0,
   cpu_usage = 0,
-  is_active,
   storage = 0,
   gpu = 0,
 }) => {
