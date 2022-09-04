@@ -19,7 +19,7 @@ const ClusterList = ({ clusters }) => {
       <div className="clusterlist-title-wrapper d-flex">
         <Title text="Dashboard" textClassName="f-content-start" />
         <div className="clusterlst-create-button-wrapper">
-          <Button text="New Cluster" />
+          <Button text="New Cluster" onClick={ ()=> setNavigateToForm(true)}/>
         </div>
       </div>
 

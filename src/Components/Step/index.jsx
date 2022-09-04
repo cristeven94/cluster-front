@@ -6,14 +6,16 @@ import "./index.css";
 import StepThree from "./StepThree";
 import StepTopBar from "./StepTopBar";
 
-const Step = ({}) => {
+const Step = ({ onCreateCluster }) => {
   const [activeStep, setActiveStep] = React.useState(1);
   const [clusterName, setClusterName] = React.useState("My new cluster");
   const onClickPrimaryButton = () => {
-    if (activeStep === 3) {
+    if (activeStep === 2) {
       console.log("Finished");
+      onCreateCluster();
       return;
     }
+    console.log("Next");
     setActiveStep(activeStep + 1);
   };
 
