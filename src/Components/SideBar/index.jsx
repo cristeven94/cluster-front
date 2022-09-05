@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../../Theme";
 import "./index.css";
 
@@ -12,8 +13,17 @@ const SideBar = () => {
       <div className="profile-pic-container">
         <img src="" alt="" loading="lazy" className="profile-pic" />
       </div>
-      <div className="content"></div>
-      <div className="footer"></div>
+      <div className="content d-flex f-col f-content-center ">
+        <div className="profilepic" />
+        <ul className="sidebaroptions">
+          <li className="option">
+            <Link to="/dashboard"> Home</Link>
+          </li>
+          <li className="option">
+            <Link to="/login"> Logout</Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

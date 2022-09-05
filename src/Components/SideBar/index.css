@@ -1,3 +1,24 @@
 .sidebar-container {
 	width: 10%;
 }
+.sidebar-container .content {
+	height: 50%;
+}
+.sidebar-container .content  .sidebaroptions{
+	padding: 0 0 0 0.5rem;
+}
+
+.sidebar-container .content .profilepic {
+	height: 5rem;
+	width: 5rem;
+	background: url("../../Resources/default-profile-pic.png");
+	background-size: contain;
+	margin: 0 0 1rem 1rem;
+	border-radius: 50%;
+	border: 2px solid black;
+	opacity: 0.3;
+}
+.sidebar-container .content  .sidebaroptions .option {
+	margin: 0 0 1.4rem 0;
+	color: #757575;
+}
