@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
+import Loader from "../../Components/Loader";
 import SideBar from "../../Components/SideBar";
 import Step from "../../Components/Step";
 import Title from "../../Components/Title";
@@ -59,28 +60,32 @@ const CreateCluster = ({}) => {
         <div className="createcluster-title-wrapper d-flex ">
           <Title textClassName="f-content-start" text="Create Cluster" />
         </div>
-
-        <div className="createcluster-step-wrapper w-100 h-100">
-          <Step
-            activeStep={activeStep}
-            setActiveStep={setActiveStep}
-            onCreateCluster={onCreateCluster}
-            clusterName={cluster_name}
-            setClusterName={setClusterName}
-            provider={cloud_provider_id}
-            setProvider={setProvider}
-            application={application_id}
-            setApplication={setApplication}
-            nodes={nodes}
-            setNodes={setNodes}
-            ram={ram}
-            setRam={setRam}
-            cpu={cpu}
-            setCpu={setCpu}
-            providerOptions={fetchProviders.response || []}
-            applicationOptions={fetchApplications.response || []}
-          />
-        </div>
+        {(fetchApplications.loading || fetchProviders.loading) && (
+          <Loader size="10rem" />
+        )}
+        {fetchApplications.response && fetchProviders.response && (
+          <div className="createcluster-step-wrapper w-100 h-100">
+            <Step
+              activeStep={activeStep}
+              setActiveStep={setActiveStep}
+              onCreateCluster={onCreateCluster}
+              clusterName={cluster_name}
+              setClusterName={setClusterName}
+              provider={cloud_provider_id}
+              setProvider={setProvider}
+              application={application_id}
+              setApplication={setApplication}
+              nodes={nodes}
+              setNodes={setNodes}
+              ram={ram}
+              setRam={setRam}
+              cpu={cpu}
+              setCpu={setCpu}
+              providerOptions={fetchProviders.response || []}
+              applicationOptions={fetchApplications.response || []}
+            />
+          </div>
+        )}
       </div>
       {navigateToDashBoard && <Navigate to="/dashboard" />}
     </div>
