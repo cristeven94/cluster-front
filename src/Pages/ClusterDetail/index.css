@@ -23,3 +23,7 @@
 	padding: 5px 0 0 10px ;
 	height: 1.5rem;
 }
+
+.clusterdetail-page-container .loader-container {
+	margin: 5rem auto;
+}

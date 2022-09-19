@@ -7,8 +7,6 @@ const useFetch = ({
     Authorization: `Basic ${btoa(REQUEST_CREDENTIALS)}`,
     "Content-Type": "text/plain",
   },
-  // method = "GET",
-  // fetchOnClick = false,
   dependencies = [],
 }) => {
   // const [clicked, setClicked] = React.useState(false);
@@ -20,15 +18,10 @@ const useFetch = ({
     const abortController = new AbortController();
     const signal = abortController.signal;
     const doFetch = async () => {
-      // if (!fetchOnClick && !clicked) {
-      //   debugger;
-      //   return;
-      // }
       setLoading(true);
       try {
         debugger;
         const res = await fetch(`${BASE_URL}${endpoint}`, {
-          // method,
           headers,
         });
         const json = await res.json();

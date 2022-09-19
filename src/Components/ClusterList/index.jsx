@@ -1,27 +1,16 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import { ThemeContext } from "../../Theme";
-import Button from "../Button";
-import Title from "../Title";
 import "./index.css";
 
 const ClusterList = ({ clusters }) => {
   const [navigationTarget, setNavigationTarget] = React.useState("");
-  const [navigateToForm, setNavigateToForm] = React.useState(false);
   const { fontColors, fontSizes } = React.useContext(ThemeContext);
   return (
     <div className="clusterlist-container w-100 h-100 d-flex f-col">
       {navigationTarget && (
         <Navigate to={`/cluster-detail/${navigationTarget}`} />
       )}
-      {navigateToForm && <Navigate to="/create-cluster" />}
-      <div className="clusterlist-title-wrapper d-flex">
-        <Title text="Dashboard" textClassName="f-content-start" />
-        <div className="clusterlst-create-button-wrapper">
-          <Button text="New Cluster" onClick={() => setNavigateToForm(true)} />
-        </div>
-      </div>
-
       <div className="clusterlist-table h-100">
         <div className="clusterlist-headers w-100 d-flex f-content-space-ar">
           <div className="clusterlist-header-name">

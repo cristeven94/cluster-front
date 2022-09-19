@@ -12,7 +12,6 @@ const StepOne = ({
   applicationOptions,
   providerOptions,
 }) => {
-  console.log(applicationOptions, providerOptions);
   const { fontColors } = React.useContext(ThemeContext);
   return (
     <div className="stepone-container w-100">
