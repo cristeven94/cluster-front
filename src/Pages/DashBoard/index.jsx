@@ -12,7 +12,6 @@ import "./index.css";
 const Dashboard = ({}) => {
   const { response, loading, error } = useFetch({ endpoint: ENDPOINTS.ALL });
   const [navigateToForm, setNavigateToForm] = React.useState(false);
-  console.log("dashboard", loading);
   return (
     <div className="dashboard-container d-flex w-100 h-100">
       {navigateToForm && <Navigate to="/create-cluster" />}

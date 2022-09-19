@@ -29,7 +29,7 @@ const PowerButton = ({ id, is_active }) => {
   return (
     <div
       className="powerbutton-container d-flex"
-      onClick={() => handlerOnClick(!isOn)}
+      onClick={() => handlerOnClick()}
     >
       <div className={`btn-bg ${isOn ? "active" : ""}`}>
         <div className="btn-highlight"></div>
@@ -37,11 +37,7 @@ const PowerButton = ({ id, is_active }) => {
           <div className="ring-line"></div>
         </div>
       </div>
-      <Button
-        className="powerbutton-textbutton"
-        text={isOn ? "On" : "Off"}
-        onClick={() => console.log()}
-      />
+      <Button className="powerbutton-textbutton" text={isOn ? "On" : "Off"} />
     </div>
   );
 };
