@@ -20,7 +20,6 @@ const useFetch = ({
     const doFetch = async () => {
       setLoading(true);
       try {
-        debugger;
         const res = await fetch(`${BASE_URL}${endpoint}`, {
           headers,
         });

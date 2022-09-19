@@ -3,21 +3,18 @@ import { Navigate } from "react-router-dom";
 import SideBar from "../../Components/SideBar";
 import Step from "../../Components/Step";
 import Title from "../../Components/Title";
-import { ENDPOINTS } from "../../Endpoints";
+import { BASE_URL, ENDPOINTS, REQUEST_CREDENTIALS } from "../../Endpoints";
+
 import useFetch from "../../Hooks/useFetch";
 import "./index.css";
 
 const CreateCluster = ({}) => {
   const [navigateToDashBoard, setNavigatetoDashboard] = React.useState(false);
-  const onCreateCluster = () => {
-    console.log("On Create");
-    setTimeout(() => setNavigatetoDashboard(true), 2000);
-  };
   const [activeStep, setActiveStep] = React.useState(1);
 
-  const [clusterName, setClusterName] = React.useState("My new cluster");
-  const [provider, setProvider] = React.useState(1);
-  const [application, setApplication] = React.useState(1);
+  const [cluster_name, setClusterName] = React.useState("My new cluster");
+  const [cloud_provider_id, setProvider] = React.useState(1);
+  const [application_id, setApplication] = React.useState(1);
   const [nodes, setNodes] = React.useState(0);
   const [ram, setRam] = React.useState(0);
   const [cpu, setCpu] = React.useState(0);
@@ -30,6 +27,30 @@ const CreateCluster = ({}) => {
     fetchOnClick: false,
     endpoint: ENDPOINTS.APPLICATIONS,
   });
+  const onCreateCluster = async () => {
+    const newClusterData = {
+      cluster_name,
+      agents_quantity: nodes,
+      agents_memory: ram,
+      cloud_provider_id,
+      application_id,
+    };
+    const headers = {
+      Authorization: `Basic ${btoa(REQUEST_CREDENTIALS)}`,
+      "Content-Type": "application/json",
+    };
+    console.log(JSON.stringify(newClusterData));
+    try {
+      await fetch(`${BASE_URL}${ENDPOINTS.ALL}`, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(newClusterData),
+      });
+      setNavigatetoDashboard(true);
+    } catch (error) {
+      console.warn("Error al crear cluster", error);
+    }
+  };
   return (
     <div className="createcluster-container w-100 h-100 d-flex ">
       <SideBar />
@@ -44,11 +65,11 @@ const CreateCluster = ({}) => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             onCreateCluster={onCreateCluster}
-            clusterName={clusterName}
+            clusterName={cluster_name}
             setClusterName={setClusterName}
-            provider={provider}
+            provider={cloud_provider_id}
             setProvider={setProvider}
-            application={application}
+            application={application_id}
             setApplication={setApplication}
             nodes={nodes}
             setNodes={setNodes}
