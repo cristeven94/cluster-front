@@ -50,7 +50,7 @@ const ClusterDetail = ({}) => {
                 {response.application_id.application_name}
               </p>
             </div>
-            <PowerButton is_active={response.is_running} />
+            <PowerButton id={response.id} is_active={response.is_running} />
           </div>
           <div className="clusterdetail-body">
             <Cluster {...response} />

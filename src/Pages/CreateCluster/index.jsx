@@ -40,7 +40,6 @@ const CreateCluster = ({}) => {
       Authorization: `Basic ${btoa(REQUEST_CREDENTIALS)}`,
       "Content-Type": "application/json",
     };
-    console.log(JSON.stringify(newClusterData));
     try {
       await fetch(`${BASE_URL}${ENDPOINTS.ALL}`, {
         method: "POST",
