@@ -6,16 +6,30 @@ import "./index.css";
 import StepThree from "./StepThree";
 import StepTopBar from "./StepTopBar";
 
-const Step = ({ onCreateCluster }) => {
-  const [activeStep, setActiveStep] = React.useState(1);
-  const [clusterName, setClusterName] = React.useState("My new cluster");
+const Step = ({
+  onCreateCluster,
+  activeStep,
+  setActiveStep,
+  clusterName,
+  setClusterName,
+  provider,
+  setProvider,
+  application,
+  setApplication,
+  nodes,
+  setNodes,
+  ram,
+  setRam,
+  cpu,
+  setCpu,
+  providerOptions,
+  applicationOptions,
+}) => {
   const onClickPrimaryButton = () => {
     if (activeStep === 2) {
-      console.log("Finished");
       onCreateCluster();
       return;
     }
-    console.log("Next");
     setActiveStep(activeStep + 1);
   };
 
@@ -29,9 +43,27 @@ const Step = ({ onCreateCluster }) => {
     >
       <StepTopBar activeStep={activeStep} />
       {activeStep === 1 && (
-        <StepOne clusterName={clusterName} setClusterName={setClusterName} />
+        <StepOne
+          clusterName={clusterName}
+          setClusterName={setClusterName}
+          application={application}
+          provider={provider}
+          providerOptions={providerOptions}
+          applicationOptions={applicationOptions}
+          setProvider={setProvider}
+          setApplication={setApplication}
+        />
       )}
-      {activeStep === 2 && <StepTwo />}
+      {activeStep === 2 && (
+        <StepTwo
+          ram={ram}
+          setRam={setRam}
+          nodes={nodes}
+          setNodes={setNodes}
+          cpu={cpu}
+          setCpu={setCpu}
+        />
+      )}
       {activeStep === 3 && <StepThree />}
 
       {activeStep !== 3 && (

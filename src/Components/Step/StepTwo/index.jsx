@@ -1,9 +1,10 @@
+import { setNestedObjectValues } from "formik";
 import React from "react";
 import { ThemeContext } from "../../../Theme";
 import Title from "../../Title";
 import "./index.css";
 
-const StepTwo = ({}) => {
+const StepTwo = ({ nodes, setNodes, ram, setRam, cpu, setCpu }) => {
   const { fontColors, fontSizes } = React.useContext(ThemeContext);
   return (
     <div className="steptwo-container row-gap-2 w-100 h-100 d-flex f-col">
@@ -21,7 +22,12 @@ const StepTwo = ({}) => {
           >
             Number of nodes:
           </label>
-          <input type="number" className="nodes-input" />
+          <input
+            type="number"
+            className="nodes-input"
+            value={nodes}
+            onChange={(e) => setNodes(Number(e.target.value))}
+          />
         </div>
       </div>
       <Title
@@ -40,7 +46,12 @@ const StepTwo = ({}) => {
               RAM:
             </label>
           </div>
-          <input type="number" className="ram-input" />
+          <input
+            type="number"
+            className="ram-input"
+            value={ram}
+            onChange={(e) => setRam(Number(e.target.value))}
+          />
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
           >
@@ -57,7 +68,17 @@ const StepTwo = ({}) => {
               CPU:
             </label>
           </div>
-          <input type="number" className="cpu-input" />
+          <input
+            type="number"
+            className="cpu-input"
+            value={cpu}
+            onChange={(e) => setCpu(Number(e.target.value))}
+          />
+          <span
+            style={{ color: fontColors.primary, fontSize: fontSizes.small }}
+          >
+            GB
+          </span>
         </div>
       </div>
     </div>

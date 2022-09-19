@@ -2,7 +2,17 @@ import React from "react";
 import { ThemeContext } from "../../../Theme";
 import "./index.css";
 
-const StepOne = ({ clusterName, setClusterName }) => {
+const StepOne = ({
+  clusterName,
+  setClusterName,
+  provider,
+  setProvider,
+  application,
+  setApplication,
+  applicationOptions,
+  providerOptions,
+}) => {
+  console.log(applicationOptions, providerOptions);
   const { fontColors } = React.useContext(ThemeContext);
   return (
     <div className="stepone-container w-100">
@@ -29,8 +39,14 @@ const StepOne = ({ clusterName, setClusterName }) => {
             name="provider"
             id="provider"
             className="stepone-selection-input"
+            onChange={(e) => setProvider(Number(e.target.value))}
+            value={provider}
           >
-            <option value="AWS">AWS</option>
+            {providerOptions.map((option) => (
+              <option key={option.id} value={option.id}>
+                {option.cloud_name}
+              </option>
+            ))}
           </select>
         </div>
         <div className="stepone-field d-flex">
@@ -45,8 +61,14 @@ const StepOne = ({ clusterName, setClusterName }) => {
             name="application"
             id="application"
             className="stepone-selection-input"
+            onChange={(e) => setApplication(Number(e.target.value))}
+            value={application}
           >
-            <option value="OpenFaas">OpenFaas</option>
+            {applicationOptions.map((option) => (
+              <option key={option.id} value={option.id}>
+                {option.application_name}
+              </option>
+            ))}
           </select>
         </div>
       </div>
