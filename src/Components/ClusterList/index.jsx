@@ -14,12 +14,11 @@ const ClusterList = ({ clusters }) => {
       {navigationTarget && (
         <Navigate to={`/cluster-detail/${navigationTarget}`} />
       )}
-
       {navigateToForm && <Navigate to="/create-cluster" />}
       <div className="clusterlist-title-wrapper d-flex">
         <Title text="Dashboard" textClassName="f-content-start" />
         <div className="clusterlst-create-button-wrapper">
-          <Button text="New Cluster" onClick={ ()=> setNavigateToForm(true)}/>
+          <Button text="New Cluster" onClick={() => setNavigateToForm(true)} />
         </div>
       </div>
 

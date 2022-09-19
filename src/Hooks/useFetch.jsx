@@ -25,7 +25,6 @@ const useFetch = ({
       //   return;
       // }
       setLoading(true);
-      console.log([headers, REQUEST_CREDENTIALS]);
       try {
         debugger;
         const res = await fetch(`${BASE_URL}${endpoint}`, {
