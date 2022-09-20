@@ -46,3 +46,26 @@ code {
 body *:focus-visible {
 	outline:  #d6d6d6 solid 1px;
 }
+
+::-webkit-scrollbar {
+	height: 6px;
+	width: 6px;
+	border-radius: 5px;
+	background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #cdcdcd;
+	border-radius: 5px;
+	
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

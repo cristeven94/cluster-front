@@ -1,14 +1,68 @@
-.steptwo-container .config-form-wrapper {
+/* .steptwo-container .config-form-wrapper {
 	width: 10rem
+
+} */
+
+.steptwo-container .cpu-input {
+	color: #757575;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 1px solid #d6d6d6;
+	text-indent: 10px;
+
 }
+
 .steptwo-container .config-form-wrapper .cpu-label-wrapper{
 	width: 10rem
 }
 
 
+
+.steptwo-container .ram-input {
+	color: #757575;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 1px solid #d6d6d6;
+	text-indent: 10px;
+
+}
+
+.steptwo-container .config-form-wrapper .ram-label-wrapper{
+	width: 10rem
+
+}
+
+.steptwo-container .storage-input {
+	color: #757575;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 1px solid #d6d6d6;
+	text-indent: 10px;
+
+}
+
+.steptwo-container .config-form-wrapper .storage-label-wrapper{
+	width: 10rem
+}
+
+
+
+.steptwo-container .nodes-input {
+	color: #757575;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 1px solid #d6d6d6;
+	text-indent: 10px;
+
+}
+
 .steptwo-container .nodes-form-wrapper .nodes-label-wrapper {
 	width: 30rem
 }
 .steptwo-container .nodes-form-wrapper .nodes-label-wrapper .nodes-label{
+	width: 10rem
+}
+
+.storage-label, .ram-label, .cpu-label {
 	width: 10rem
 }

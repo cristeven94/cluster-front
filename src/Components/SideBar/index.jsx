@@ -4,7 +4,7 @@ import { ThemeContext } from "../../Theme";
 import "./index.css";
 
 const SideBar = () => {
-  const { background } = React.useContext(ThemeContext);
+  const { background, fontColors } = React.useContext(ThemeContext);
   return (
     <div
       className="sidebar-container h-100 d-flex f-col"
@@ -15,12 +15,28 @@ const SideBar = () => {
       </div>
       <div className="content d-flex f-col f-content-center ">
         <div className="profilepic" />
-        <ul className="sidebaroptions">
+        <ul className="sidebaroptions d-flex f-col a-items-center ">
           <li className="option">
-            <Link to="/dashboard"> Home</Link>
+            <Link
+              style={{
+                color: fontColors.primary,
+              }}
+              to="/dashboard"
+            >
+              {" "}
+              Home
+            </Link>
           </li>
           <li className="option">
-            <Link to="/login"> Logout</Link>
+            <Link
+              style={{
+                color: fontColors.primary,
+              }}
+              to="/login"
+            >
+              {" "}
+              Logout
+            </Link>
           </li>
         </ul>
       </div>

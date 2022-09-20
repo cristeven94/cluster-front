@@ -12,7 +12,7 @@ const StepTopBar = ({ activeStep }) => {
         style={{
           background:
             activeStep == 1 ? background.primary : background.terciary,
-          color: activeStep == 1 ? fontColors.secondary : fontColors.priamry,
+          color: activeStep == 1 ? fontColors.secondary : fontColors.primary,
         }}
       >
         1
@@ -23,7 +23,7 @@ const StepTopBar = ({ activeStep }) => {
         style={{
           background:
             activeStep == 2 ? background.primary : background.terciary,
-          color: activeStep == 2 ? fontColors.secondary : fontColors.priamry,
+          color: activeStep == 2 ? fontColors.secondary : fontColors.primary,
         }}
       >
         2
@@ -34,7 +34,7 @@ const StepTopBar = ({ activeStep }) => {
         style={{
           background:
             activeStep == 3 ? background.primary : background.terciary,
-          color: activeStep == 3 ? fontColors.secondary : fontColors.priamry,
+          color: activeStep == 3 ? fontColors.secondary : fontColors.primary,
         }}
       >
         3

@@ -22,6 +22,8 @@ const Step = ({
   setRam,
   cpu,
   setCpu,
+  storage,
+  setStorage,
   providerOptions,
   applicationOptions,
 }) => {
@@ -62,6 +64,8 @@ const Step = ({
           setNodes={setNodes}
           cpu={cpu}
           setCpu={setCpu}
+          storage={storage}
+          setStorage={setStorage}
         />
       )}
       {activeStep === 3 && <StepThree />}

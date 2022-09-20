@@ -16,10 +16,10 @@ const CreateCluster = ({}) => {
   const [cluster_name, setClusterName] = React.useState("My new cluster");
   const [cloud_provider_id, setProvider] = React.useState(1);
   const [application_id, setApplication] = React.useState(1);
-  const [nodes, setNodes] = React.useState(0);
-  const [ram, setRam] = React.useState(0);
-  const [cpu, setCpu] = React.useState(0);
-
+  const [nodes, setNodes] = React.useState();
+  const [ram, setRam] = React.useState();
+  const [cpu, setCpu] = React.useState();
+  const [storage, setStorage] = React.useState();
   const fetchProviders = useFetch({
     fetchOnClick: false,
     endpoint: ENDPOINTS.CLOUD_PROVIDERS,
@@ -32,7 +32,9 @@ const CreateCluster = ({}) => {
     const newClusterData = {
       cluster_name,
       agents_quantity: nodes,
-      agents_memory: ram,
+      agents_memory: storage,
+      ram,
+      cpu,
       cloud_provider_id,
       application_id,
     };
@@ -80,6 +82,8 @@ const CreateCluster = ({}) => {
               setRam={setRam}
               cpu={cpu}
               setCpu={setCpu}
+              storage={storage}
+              setStorage={setStorage}
               providerOptions={fetchProviders.response || []}
               applicationOptions={fetchApplications.response || []}
             />

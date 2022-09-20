@@ -5,3 +5,10 @@
 .stepone-container .stepone-label {
 	width: 10rem;
 }
+
+.stepone-container .namefield-input {
+	border-radius: 5px;
+	border: none;
+	border-bottom: 1px solid #d6d6d6;
+	text-indent: 10px;
+}

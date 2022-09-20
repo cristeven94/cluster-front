@@ -20,9 +20,7 @@
 }
 
 .btn-bg.active{
-  background: #2d3036;
   border-bottom: 2px solid #ffcab6;
-  border-top: 2px solid #e66847;
 }
 
 .btn-highlight{
@@ -30,10 +28,6 @@
   height: 82px;
   background: #eee;
   margin-left: 41px;
-}
-
-.active .btn-highlight{
-  background: #52555d;
 }
 
 .btn-ring{
@@ -61,8 +55,6 @@
 
 .active .ring-line{
   background: #62b679;
-  border-right: 3px solid #52555d;
-  border-left: 3px solid #2d3036;
 }
 
 .powerbutton-container .powerbutton-textbutton {

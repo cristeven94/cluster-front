@@ -4,7 +4,16 @@ import { ThemeContext } from "../../../Theme";
 import Title from "../../Title";
 import "./index.css";
 
-const StepTwo = ({ nodes, setNodes, ram, setRam, cpu, setCpu }) => {
+const StepTwo = ({
+  nodes,
+  setNodes,
+  ram,
+  setRam,
+  cpu,
+  setCpu,
+  storage,
+  setStorage,
+}) => {
   const { fontColors, fontSizes } = React.useContext(ThemeContext);
   return (
     <div className="steptwo-container row-gap-2 w-100 h-100 d-flex f-col">
@@ -27,6 +36,7 @@ const StepTwo = ({ nodes, setNodes, ram, setRam, cpu, setCpu }) => {
             className="nodes-input"
             value={nodes}
             onChange={(e) => setNodes(Number(e.target.value))}
+            minValue={0}
           />
         </div>
       </div>
@@ -51,6 +61,7 @@ const StepTwo = ({ nodes, setNodes, ram, setRam, cpu, setCpu }) => {
             className="ram-input"
             value={ram}
             onChange={(e) => setRam(Number(e.target.value))}
+            minValue={0}
           />
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
@@ -73,6 +84,28 @@ const StepTwo = ({ nodes, setNodes, ram, setRam, cpu, setCpu }) => {
             className="cpu-input"
             value={cpu}
             onChange={(e) => setCpu(Number(e.target.value))}
+            minValue={0}
+          />
+          <span
+            style={{ color: fontColors.primary, fontSize: fontSizes.small }}
+          ></span>
+        </div>
+        <div className="storage-wrapper d-flex">
+          <div className="storage-label-wrapper">
+            <label
+              style={{ color: fontColors.primary }}
+              htmlFor="storage"
+              className="storage-label"
+            >
+              Storage:
+            </label>
+          </div>
+          <input
+            type="number"
+            className="storage-input"
+            value={storage}
+            onChange={(e) => setStorage(Number(e.target.value))}
+            minValue={0}
           />
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
