@@ -22,6 +22,7 @@ const useFetch = ({
       try {
         const res = await fetch(`${BASE_URL}${endpoint}`, {
           headers,
+          method: 'GET'
         });
         const json = await res.json();
         if (!signal.aborted) {

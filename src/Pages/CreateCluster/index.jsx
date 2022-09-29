@@ -20,6 +20,7 @@ const CreateCluster = ({}) => {
   const [ram, setRam] = React.useState();
   const [cpu, setCpu] = React.useState();
   const [storage, setStorage] = React.useState();
+  const [loading, setLoading] = React.useState();
   const fetchProviders = useFetch({
     fetchOnClick: false,
     endpoint: ENDPOINTS.CLOUD_PROVIDERS,
@@ -42,6 +43,7 @@ const CreateCluster = ({}) => {
       Authorization: `Basic ${btoa(REQUEST_CREDENTIALS)}`,
       "Content-Type": "application/json",
     };
+    setLoading(true)
     try {
       await fetch(`${BASE_URL}${ENDPOINTS.ALL}`, {
         method: "POST",
@@ -51,6 +53,8 @@ const CreateCluster = ({}) => {
       setNavigatetoDashboard(true);
     } catch (error) {
       console.warn("Error al crear cluster", error);
+    } finally {
+      setLoading(false)
     }
   };
   return (
@@ -67,7 +71,7 @@ const CreateCluster = ({}) => {
         {fetchApplications.response && fetchProviders.response && (
           <div className="createcluster-step-wrapper w-100 h-100">
             <Step
-              activeStep={activeStep}
+              activeStep={loading ? 3 : activeStep}
               setActiveStep={setActiveStep}
               onCreateCluster={onCreateCluster}
               clusterName={cluster_name}
