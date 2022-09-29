@@ -56,7 +56,7 @@ const ClusterDetail = ({}) => {
                 className="attribute-value"
                 style={{ backgroundColor: background.terciary }}
               >
-                {`${response.nodes[0]?.ram_usage ?? 0} GB`}
+                {`${response.nodes[0]?.ram_usage ?? 0} MB`}
               </p>
             </div>
             <div className="clusterdetail-attribute d-flex">
@@ -65,16 +65,7 @@ const ClusterDetail = ({}) => {
                 className="attribute-value"
                 style={{ backgroundColor: background.terciary }}
               >
-                {`${response.nodes[0]?.cpu_usage ?? 0} GB`}
-              </p>
-            </div>
-            <div className="clusterdetail-attribute d-flex">
-              <p className="attribute-label">GPU:</p>{" "}
-              <p
-                className="attribute-value"
-                style={{ backgroundColor: background.terciary }}
-              >
-                {`${response.nodes[0]?.gpu ?? 1} GB`}
+                {`${response.nodes[0]?.cpu_usage ?? 0} MB`}
               </p>
             </div>
             <div className="clusterdetail-attribute d-flex">
@@ -83,7 +74,7 @@ const ClusterDetail = ({}) => {
                 className="attribute-value"
                 style={{ backgroundColor: background.terciary }}
               >
-                {`${response.nodes[0]?.storage ?? 1} GB`}
+                {`${response.nodes[0]?.storage ?? 1} MB`}
               </p>
             </div>
 

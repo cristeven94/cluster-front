@@ -66,7 +66,7 @@ const StepTwo = ({
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
           >
-            GB
+            MB
           </span>
         </div>
         <div className="cpu-wrapper d-flex">
@@ -110,7 +110,7 @@ const StepTwo = ({
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
           >
-            GB
+            MB
           </span>
         </div>
       </div>
