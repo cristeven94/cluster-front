@@ -29,7 +29,7 @@ const ClusterDetail = ({}) => {
             />
           </div>
           <div
-            className="clusterdetail-attributes d-flex f-col"
+            className="clusterdetail-attributes d-grid-3"
             style={{ color: fontColors.primary }}
           >
             <div className="clusterdetail-attribute d-flex">
@@ -50,6 +50,43 @@ const ClusterDetail = ({}) => {
                 {response.application_id.application_name}
               </p>
             </div>
+            <div className="clusterdetail-attribute d-flex">
+              <p className="attribute-label">RAM:</p>{" "}
+              <p
+                className="attribute-value"
+                style={{ backgroundColor: background.terciary }}
+              >
+                {`${response.nodes[0]?.ram_usage ?? 0} GB`}
+              </p>
+            </div>
+            <div className="clusterdetail-attribute d-flex">
+              <p className="attribute-label">CPU:</p>{" "}
+              <p
+                className="attribute-value"
+                style={{ backgroundColor: background.terciary }}
+              >
+                {`${response.nodes[0]?.cpu_usage ?? 0} GB`}
+              </p>
+            </div>
+            <div className="clusterdetail-attribute d-flex">
+              <p className="attribute-label">GPU:</p>{" "}
+              <p
+                className="attribute-value"
+                style={{ backgroundColor: background.terciary }}
+              >
+                {`${response.nodes[0]?.gpu ?? 1} GB`}
+              </p>
+            </div>
+            <div className="clusterdetail-attribute d-flex">
+              <p className="attribute-label">Storage:</p>{" "}
+              <p
+                className="attribute-value"
+                style={{ backgroundColor: background.terciary }}
+              >
+                {`${response.nodes[0]?.storage ?? 1} GB`}
+              </p>
+            </div>
+
             <PowerButton id={response.id} is_active={response.is_running} />
           </div>
           <div className="clusterdetail-body">

@@ -9,6 +9,8 @@
 .clusterdetail-page-container .clusterdetail-attributes{
 	margin: 0 0 1rem 0;
 	row-gap: 2rem;
+	width: 80%;
+	margin: 0 0 4rem 0;
 }
 .clusterdetail-page-container .attribute-label {
 	width: 10rem;
@@ -17,10 +19,9 @@
 .clusterdetail-page-container .attribute-value {
 	border: 1px solid gray;
 	border-radius: 5px;
-	direction: rtl;
 	text-align: left;
 	text-indent: 10px;
-	padding: 5px 0 0 10px ;
+	padding: 5px 10px 0 10px ;
 	height: 1.5rem;
 }
 

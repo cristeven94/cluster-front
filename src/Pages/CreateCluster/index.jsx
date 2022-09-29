@@ -16,7 +16,7 @@ const CreateCluster = ({}) => {
   const [cluster_name, setClusterName] = React.useState("My new cluster");
   const [cloud_provider_id, setProvider] = React.useState(1);
   const [application_id, setApplication] = React.useState(1);
-  const [nodes, setNodes] = React.useState();
+  const [nodes, setNodes] = React.useState(1);
   const [ram, setRam] = React.useState();
   const [cpu, setCpu] = React.useState();
   const [storage, setStorage] = React.useState();

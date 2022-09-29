@@ -36,7 +36,7 @@ const StepTwo = ({
             className="nodes-input"
             value={nodes}
             onChange={(e) => setNodes(Number(e.target.value))}
-            minValue={0}
+            min={"1"}
           />
         </div>
       </div>
@@ -61,7 +61,7 @@ const StepTwo = ({
             className="ram-input"
             value={ram}
             onChange={(e) => setRam(Number(e.target.value))}
-            minValue={0}
+            min={"0"}
           />
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
@@ -84,7 +84,7 @@ const StepTwo = ({
             className="cpu-input"
             value={cpu}
             onChange={(e) => setCpu(Number(e.target.value))}
-            minValue={0}
+            min={0}
           />
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
@@ -105,7 +105,7 @@ const StepTwo = ({
             className="storage-input"
             value={storage}
             onChange={(e) => setStorage(Number(e.target.value))}
-            minValue={0}
+            min={0}
           />
           <span
             style={{ color: fontColors.primary, fontSize: fontSizes.small }}
