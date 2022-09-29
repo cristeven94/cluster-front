@@ -29,7 +29,7 @@ const ClusterDetail = ({}) => {
             />
           </div>
           <div
-            className="clusterdetail-attributes d-flex f-col"
+            className="clusterdetail-attributes d-grid-3"
             style={{ color: fontColors.primary }}
           >
             <div className="clusterdetail-attribute d-flex">
@@ -50,6 +50,34 @@ const ClusterDetail = ({}) => {
                 {response.application_id.application_name}
               </p>
             </div>
+            <div className="clusterdetail-attribute d-flex">
+              <p className="attribute-label">RAM:</p>{" "}
+              <p
+                className="attribute-value"
+                style={{ backgroundColor: background.terciary }}
+              >
+                {`${response.nodes[0]?.ram_usage ?? 0} MB`}
+              </p>
+            </div>
+            <div className="clusterdetail-attribute d-flex">
+              <p className="attribute-label">CPU:</p>{" "}
+              <p
+                className="attribute-value"
+                style={{ backgroundColor: background.terciary }}
+              >
+                {`${response.nodes[0]?.cpu_usage ?? 0}`}
+              </p>
+            </div>
+            <div className="clusterdetail-attribute d-flex">
+              <p className="attribute-label">Storage:</p>{" "}
+              <p
+                className="attribute-value"
+                style={{ backgroundColor: background.terciary }}
+              >
+                {`${response.nodes[0]?.storage ?? 1} MB`}
+              </p>
+            </div>
+
             <PowerButton id={response.id} is_active={response.is_running} />
           </div>
           <div className="clusterdetail-body">

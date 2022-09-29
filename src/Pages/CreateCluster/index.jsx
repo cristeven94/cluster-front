@@ -16,11 +16,11 @@ const CreateCluster = ({}) => {
   const [cluster_name, setClusterName] = React.useState("My new cluster");
   const [cloud_provider_id, setProvider] = React.useState(1);
   const [application_id, setApplication] = React.useState(1);
-  const [nodes, setNodes] = React.useState();
+  const [nodes, setNodes] = React.useState(1);
   const [ram, setRam] = React.useState();
   const [cpu, setCpu] = React.useState();
   const [storage, setStorage] = React.useState();
-  const [loading, setLoading] = React.useState();
+  const [loading, setLoading] = React.useState(false);
   const fetchProviders = useFetch({
     fetchOnClick: false,
     endpoint: ENDPOINTS.CLOUD_PROVIDERS,
@@ -33,8 +33,8 @@ const CreateCluster = ({}) => {
     const newClusterData = {
       cluster_name,
       agents_quantity: nodes,
-      agents_memory: storage,
-      ram,
+      agents_memory: ram,
+      storage,
       cpu,
       cloud_provider_id,
       application_id,
@@ -43,7 +43,7 @@ const CreateCluster = ({}) => {
       Authorization: `Basic ${btoa(REQUEST_CREDENTIALS)}`,
       "Content-Type": "application/json",
     };
-    setLoading(true)
+    setLoading(true);
     try {
       await fetch(`${BASE_URL}${ENDPOINTS.ALL}`, {
         method: "POST",
@@ -54,7 +54,7 @@ const CreateCluster = ({}) => {
     } catch (error) {
       console.warn("Error al crear cluster", error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   };
   return (
