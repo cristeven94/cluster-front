@@ -18,3 +18,12 @@
 	padding: 0.5rem;
 	gap: 0.5rem;
 }
+
+
+.clusternode-container .clusternode-delete-icon {
+	min-height: 1.2rem;
+}
+.clusternode-container .clusternode-delete-icon .delete-icon {
+	border: 1px solid #757575;
+	border-radius: 5px;
+}
